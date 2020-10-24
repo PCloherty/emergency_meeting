@@ -1,5 +1,6 @@
 const { Client, Collection } = require("discord.js");
 const { config } = require("dotenv");
+const Status = require("./commands/functions/status.js")
 const fs = require("fs");
 
 const client = new Client({
@@ -21,7 +22,7 @@ client.on("ready", () => {
   console.log(`Ready to push redbutton`);
 
   client.user.setActivity({
-     name: "CAMS", type: "WATCHING" 
+     name: Status(), type: "WATCHING" 
   });
 });
 
