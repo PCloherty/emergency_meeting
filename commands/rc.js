@@ -5,5 +5,6 @@ module.exports = {
     usage:'!eject @mention',
     execute(message) {
         role_change.execute(message)
+        message.delete()
     }
 }
